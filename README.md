@@ -9,9 +9,10 @@ En "Empanadas Giménez", un modesto local de delivery de empanadas, tenemos dos 
 * Galván, el empleado de siempre, que cobra un sueldo fijo. El valor arranca en $ 150.000, y después puede cambiar mes a mes.
 * Baigorria, el joven y explotado empleado de Giménez, que cobra en base a la cantidad de empanadas vendidas (actualmente $ 150 por empanada).
 
-El dueño, el señor Giménez, es el encargado de pagarle el sueldo a los empleados, y de gestionar el dinero que se utiliza para esto. Asumimos que Giménez arranca con un fondo para sueldos de $ 3.000.000. Como los sueldos salen de este fondo, hay que descontar el importe correspondiente cuando Giménez le paga a un empleado.
+ El dueño, el señor Giménez, es el encargado de pagarle el sueldo a los empleados, y de gestionar el dinero que se utiliza para esto. Asumimos que Giménez arranca con un fondo para sueldos de $ 3.000.000.
+ Como los sueldos salen de este fondo, hay que descontar el importe correspondiente cuando Giménez le paga a un empleado.
 
-Por ahora no vamos a tener en cuenta qué hace cada empleado al recibir el dinero, el único efecto que nos interesa del pago es que disminuye el fondo de Giménez.
+ Por ahora no vamos a tener en cuenta qué hace cada empleado al recibir el dinero, el único efecto que nos interesa del pago es que disminuye el fondo de Giménez.
 
 
 <br>
@@ -28,14 +29,16 @@ method pagarA(empleado) {
 ```
 - probar haciendo que Giménez le pague a Baigorria. Se rompe. ¿Por qué?
 - ¿qué método o métodos hay que agregar, en qué objeto u objetos, para que Giménez le pueda pagar el sueldo a cualquiera de los dos empleados?
-- agregar esos métodos con el siguiente criterio: Baigorria cuando cobra el sueldo lo suma a un acumulador de todo lo que cobró, agregarle la capacidad de entender el mensaje `totalCobrado()`. Galván no hace nada.
+- agregar esos métodos con el siguiente criterio: Baigorria cuando cobra el sueldo lo suma a un acumulador de todo lo que cobró, agregarle la capacidad de entender el mensaje
+ `totalCobrado()`. Galván no hace nada.
 
 
 <br>
 
 ## Manejo fino de las finanzas de Galván
 
-Modificar el comportamiento de Galván para que maneje sus gastos, el dinero que tiene, y su deuda. Cuando Galván gasta, se descuenta de su dinero, si no le alcanza aumenta la deuda. Cuando cobra un sueldo, Galván paga sus deudas. Si sobra algo, se suma al dinero que tiene. Agregar a Galván la capacidad de entender los mensajes: `gastar(cuanto)`, `totalDeuda()`, `totalDinero()`.
+Modificar el comportamiento de Galván para que maneje sus gastos, el dinero que tiene, y su deuda. Cuando Galván gasta, se descuenta de su dinero, si no le alcanza aumenta la deuda. Cuando cobra
+ un sueldo, Galván paga sus deudas. Si sobra algo, se suma al dinero que tiene. Agregar a Galván la capacidad de entender los mensajes: `gastar(cuanto)`, `totalDeuda()`, `totalDinero()`.
 
 Tener en cuenta este escenario
 1. Galván arranca con deuda en 0 y dinero en 0. Su sueldo (que aún no cobró) es de 150000.
